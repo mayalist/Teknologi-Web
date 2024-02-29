@@ -4,35 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyBlog</title>
+    <img src="cool.gif" alt="Cool Animation" style="width: 100%; border-radius: 8000px;
+    border: 5px solid #348cf0; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);margin-top: -200 px;">
+
     <style>
+        
         body {
             font-family: 'Arial', sans-serif;
-            margin: 20px;
-            background-color: #ecf0f1;
+            margin: 250px;
+            background: url('BLUE.jpg') no-repeat center center fixed;
+            background-size: cover;
             text-align: center;
+            color: #fff;
         }
 
         h1 {
             font-size: 48px;
-            color: #3498db;
-            margin-bottom: 10px;
             font-family: 'Segoe Script', sans-serif;
+            margin: 20px 0 0;
         }
 
-        h2 {
-            font-size: 28px;
-            color: #2ecc71;
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-family: 'Segoe Script', sans-serif;
+        h1:hover {
+            color: #c5e73c;
         }
 
-        p {
-            font-size: 18px;
-            line-height: 1.5;
-            color: #2c3e50;
-            text-align: center;
+        .myblog-section {
+            background-color: #0f4d76;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            color: #fff;
+            margin-bottom: 0px;
+            margin: 90px;
+        }
+
+        .category-box {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            transition: background-color 0.5s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-box:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        a {
+            color: #074897;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #ff1d08;
         }
 
         ul {
@@ -43,58 +69,89 @@
 
         li {
             margin-bottom: 10px;
-        }
-
-        a {
             color: #27ae60;
-            text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .blue-text {
+            color: #074897;
+        }
+
+        .box {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: 0;
+        }
+
+        /* Grid Layout */
+        body {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
         }
     </style>
 </head>
 <body>
 
-    <h1>MyBlog</h1>
+    <div class="myblog-section">
+        <h1>MyBlog</h1>
+    </div>
 
-    <h2>1. Nama :</h2>
-    <p style="color: #27ae60;">Maya Listyani</p>
+    <div class="box category-box">
+        <h2><span class="blue-text">1. Nama :</span></h2>
+        <p style="color: #074897;">Maya Listyani</p>
+    </div>
 
-    <h2>2. NRP :</h2>
-    <p style="color: #27ae60;">5322600001</p>
+    <div class="box category-box">
+        <h2><span class="blue-text">2. NRP :</span></h2>
+        <p style="color: #074897;">5322600001</p>
+    </div>
 
-    <h2>3. Kelas :</h2>
-    <p style="color: #27ae60;">2 STr.TRM A</p>
+    <div class="box category-box">
+        <h2><span class="blue-text">3. Kelas :</span></h2>
+        <p style="color: #074897;">2 STr.TRM A</p>
+    </div>
 
-    <h2>4. Tempat/Tanggal Lahir :</h2>
-    <p style="color: #27ae60;">Sidoarjo, 7 Maret 2003</p>
+    <div class="box category-box">
+        <h2><span class="blue-text">4. Tempat/Tanggal Lahir :</span></h2>
+        <p style="color: #074897;">Sidoarjo, 7 Maret 2003</p>
+    </div>
 
-    <h2>5. Alamat :</h2>
-    <p style="color: #27ae60;">Ds. Suko, Dsn. Sungon, RT 22/ RW 06</p>
+    <div class="box category-box">
+        <h2><span class="blue-text">5. Alamat :</span></h2>
+        <p style="color: #074897;">Ds. Suko, Dsn. Sungon, RT 22/ RW 06</p>
+    </div>
 
-    <h2>6. Riwayat Pendidikan :</h2>
-    <ul>
-        <li>A. SD : SDN LEBO</li>
-        <li>B. SMP : SMPN 2 Buduran</li>
-        <li>C. SMA : SMAN 4 Sidoarjo</li>
-    </ul>
+    <div class="box category-box">
+        <h2><span class="blue-text">6. Riwayat Pendidikan :</span></h2>
+        <ul>
+            <li style="color: #074897;">A. SD : SDN LEBO</li>
+            <li style="color: #074897;">B. SMP : SMPN 2 Buduran</li>
+            <li style="color: #074897;">C. SMA : SMAN 4 Sidoarjo</li>
+        </ul>
+    </div>
 
-    <h2>7. Email :</h2>
-    <p style="color: #27ae60;"><a href="mailto:listyanimayaaa@gmail.com">listyanimayaaa@gmail.com</a></p>
+    <div class="box category-box">
+        <h2><span class="blue-text">7. Email :</span></h2>
+        <p style="color: #074897;"><a href="mailto:listyanimayaaa@gmail.com">listyanimayaaa@gmail.com</a></p>
+    </div>
 
-    <h2>8. Instagram :</h2>
-    <p style="color: #27ae60;"><a href="https://www.instagram.com/maylisttt" target="_blank">@maylisttt</a></p>
+    <div class="box category-box">
+        <h2><span class="blue-text">8. Instagram :</span></h2>
+        <p style="color: #074897;"><a href="https://www.instagram.com/maylisttt" target="_blank">@maylisttt</a></p>
+    </div>
 
-    <h2>9. Hobby :</h2>
-    <ul>
-        <li style="color: #27ae60;">A. Bernyanyi</li>
-        <li style="color: #27ae60;">B. Bermimpi</li>
-    </ul>
+    <div class="box category-box">
+        <h2><span class="blue-text">9. Hobby :</span></h2>
+        <ul>
+            <li style="color: #074897;">A. Bernyanyi</li>
+            <li style="color: #074897">B. Bermimpi</li>
+        </ul>
+    </div>
 
-    <h2>10. Deskripsi Pribadi Saya :</h2>
-    <p style="color: #2c3e50;">Saya merupakan Mahasiswi Program Studi Teknologi Rekayasa Multimedia (TRM) angkatan 2022 yang sedang menempuh pendidikan di Politeknik Elektronika Negeri Surabaya (PENS). Saya senang untuk mencari pengalaman yang menarik dan mudah beradaptasi di lingkungan baru.</p>
+    <div class="box category-box">
+        <h2><span class="blue-text">10. Deskripsi Pribadi Saya :</span></h2>
+        <p style="color: #074897;">Saya merupakan Mahasiswi Program Studi Teknologi Rekayasa Multimedia (TRM) angkatan 2022 yang sedang menempuh pendidikan di Politeknik Elektronika Negeri Surabaya (PENS). Saya senang untuk mencari pengalaman yang menarik dan mudah beradaptasi di lingkungan baru.</p>
+    </div>
 
 </body>
 </html>
