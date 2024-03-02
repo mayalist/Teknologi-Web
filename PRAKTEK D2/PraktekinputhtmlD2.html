@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage DATA ENTRY by Maya</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        input[type="text"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button.reset {
+            background-color: #f44336;
+        }
+
+        button.reset:hover {
+            background-color: #d32f2f;
+        }
+
+        button.pdf {
+            background-color: #008CBA;
+        }
+
+        button.pdf:hover {
+            background-color: #007095;
+        }
+
+        #status {
+            margin-top: 10px;
+            color: green;
+            display: none;
+        }
+    </style>
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <h1>Homepage DATA ENTRY</h1>
+    <form onsubmit="return false;">
+        <table>
+            <tr>
+                <td>1. Nama :</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>2. NRP :</td>
+                <td><input type="text" name="nrp"></td>
+            </tr>
+            <tr>
+                <td>3. Kelas :</td>
+                <td><input type="text" name="kelas"></td>
+            </tr>
+            <tr>
+                <td>4. Jenis Kelamin :</td>
+                <td>
+                    <input type="radio" name="jenis_kelamin" value="Pria"> Pria
+                    <input type="radio" name="jenis_kelamin" value="Wanita"> Wanita
+                </td>
+            </tr>
+            <tr>
+                <td>5. Agama :</td>
+                <td>
+                    <select name="agama">
+                        <option value="Islam">Islam</option>
+                        <option value="Kristen">Kristen</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Budha">Budha</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>6. Tempat/Tanggal Lahir :</td>
+                <td><input type="text" name="tempat_lahir"> / <input type="text" name="tanggal_lahir"></td>
+            </tr>
+            <tr>
+                <td>7. Alamat :</td>
+                <td><textarea name="alamat" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>8. Riwayat Pendidikan :</td>
+                <td>
+                    A. SD : <input type="text" name="sd"><br>
+                    B. SMP : <input type="text" name="smp"><br>
+                    C. SMA : <input type="text" name="sma">
+                </td>
+            </tr>
+            <tr>
+                <td>9. Email :</td>
+                <td><input type="text" name="email"></td>
+            </tr>
+            <tr>
+                <td>10. Homepage :</td>
+                <td><input type="text" name="homepage"></td>
+            </tr>
+            <tr>
+                <td>11. Hobby :</td>
+                <td><textarea name="hobby" rows="4"></textarea></td>
+            </tr>
+            <tr>
+                <td>12. Interest :</td>
+                <td>
+                    <input type="checkbox" name="interest" value="Komputer"> Komputer
+                    <input type="checkbox" name="interest" value="Sport"> Sport
+                    <input type="checkbox" name="interest" value="Travelling"> Travelling
+                    <input type="checkbox" name="interest" value="Writing"> Writing
+                    <input type="checkbox" name="interest" value="Reading"> Reading
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button type="button" onclick="simpanData()">SIMPAN</button>
+        <button type="reset" class="reset" onclick="resetForm()">RESET</button>
+        <button type="button" class="pdf" onclick="downloadPDF()">Download PDF</button>
+        <p id="status">Data tersimpan</p>
+    </form>
+
+    <script>
+        function simpanData() {
+            // Logika untuk menyimpan data
+            document.getElementById("status").style.display = "block";
+            setTimeout(function() {
+                document.getElementById("status").style.display = "none";
+            }, 3000); // Menyembunyikan pesan setelah 3 detik
+        }
+
+        function resetForm() {
+            document.getElementById("status").style.display = "none";
+        }
+
+        function downloadPDF() {
+            var element = document.body;
+            html2pdf(element);
+        }
+    </script>
+</body>
+</html>
