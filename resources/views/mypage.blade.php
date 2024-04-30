@@ -32,7 +32,7 @@
             text-transform: uppercase;
             margin-bottom: 20px;
         }
-        .profile-img {
+        .profile-img { 
             display: block;
             margin: 0 auto;
             width: 150px;
